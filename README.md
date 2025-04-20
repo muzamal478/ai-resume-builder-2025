@@ -1,4 +1,8 @@
 ### AI Resume Builder 2025
+
+## live Demo
+[live Demo]()
+
 An advanced, AI-powered resume builder website built with HTML, CSS, JavaScript, and Google Gemini API. Users can input comprehensive details to generate a professional, downloadable resume with real-time previews.
 Features
 
@@ -28,7 +32,6 @@ Features
   ```bash
    git clone https://github.com/muzamal478/ai-resume-builder-2025.git
 
-
 Open index.html with a browser or use VS Code Live Server.
 
 ### To use the Gemini API:
@@ -39,16 +42,9 @@ Open index.html with a browser or use VS Code Live Server.
 
 ### File Structure
 ai-resume-builder-2025/
-├── index.html     # Main HTML file
-├── styles.css     # Custom styles 
-├── script.js      # Application logic
-├── README.md      # Documentation
 
-### Deployment
-
-GitHub Pages:
-
-Push to a GitHub repository.
-- Go to Settings > Pages, select main branch, and enable GitHub Pages.
-- Access at https://muzamal478.github.io/ai-resume-builder-2025.
+- index.html     # Main HTML file
+- styles.css     # Custom styles 
+- script.js      # Application logic
+- README.md      # Documentation
 
