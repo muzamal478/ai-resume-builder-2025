@@ -1,0 +1,60 @@
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  /* Card Hover Effect */
+  #resume-preview, form {
+    transition: transform 0.3s ease;
+  }
+  
+  #resume-preview:hover, form:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Tab Styling */
+  .tab-btn.active {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  /* Input Focus */
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .tab-btn {
+      font-size: 0.9rem;
+    }
+  
+    .grid-cols-2 {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Card Styling */
+  #preview-content > div {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  #preview-content > div:hover {
+    transform: translateY(-4px);
+  }
+  

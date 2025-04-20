@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Builder 2025</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Fixed Header -->
+  <header class="fixed top-0 left-0 w-full bg-blue-700 text-white shadow-lg z-50">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold">AI Resume Builder</h1>
+      <div class="space-x-4">
+        <a href="#" class="hover:underline">Home</a>
+        <a href="#" class="hover:underline">Resume</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex items-center justify-center pt-20">
+    <div class="container mx-auto text-center animate-fade-in">
+      <h2 class="text-5xl font-extrabold mb-4">Build Your Dream Resume with AI</h2>
+      <p class="text-xl mb-6">Create professional resumes in minutes with AI-powered insights.</p>
+      <a href="#form-section" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Get Started</a>
+    </div>
+  </section>
+  <!-- Form Section -->
+  <section id="form-section" class="container mx-auto py-12">
+    <h2 class="text-3xl font-bold text-center mb-8">Enter Your Details</h2>
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+      <!-- Tabs -->
+      <div class="flex border-b mb-6">
+        <button class="tab-btn flex-1 py-2 text-center font-semibold bg-gray-100 hover:bg-gray-200 active" data-tab="personal">Personal Info</button>
+        <button class="tab-btn flex-1 py-2 text-center font-semibold bg-gray-100 hover:bg-gray-200" data-tab="education">Education</button>
+        <button class="tab-btn flex-1 py-2 text-center font-semibold bg-gray-100 hover:bg-gray-200" data-tab="experience">Experience</button>
+        <button class="tab-btn flex-1 py-2 text-center font-semibold bg-gray-100 hover:bg-gray-200" data-tab="skills">Skills</button>
+        <button class="tab-btn flex-1 py-2 text-center font-semibold bg-gray-100 hover:bg-gray-200" data-tab="others">Others</button>
+      </div>
+
+      <!-- Form -->
+      <form id="resume-form">
+        <!-- Personal Info -->
+        <div id="personal" class="tab-content">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <input type="text" id="name" placeholder="Full Name" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+            <input type="email" id="email" placeholder="Email" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+            <input type="tel" id="phone" placeholder="Phone Number" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+            <input type="text" id="address" placeholder="Address" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+          </div>
+          <label class="block mb-4">
+            <span class="text-gray-700">Profile Picture</span>
+            <input type="file" id="profile-image" accept="image/*" class="mt-1 block w-full p-2 border rounded-lg">
+          </label>
+          <textarea id="summary" placeholder="Personal Summary" class="p-3 border rounded-lg w-full h-24 focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+
+        <!-- Education -->
+        <div id="education" class="tab-content hidden">
+          <textarea id="education-details" placeholder="Degree, Institution, Year (e.g., B.Sc. Computer Science, XYZ University, 2020-2024)" class="p-3 border rounded-lg w-full h-32 focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+
+        <!-- Experience -->
+        <div id="experience" class="tab-content hidden">
+          <textarea id="experience-details" placeholder="Job Title, Company, Duration, Responsibilities" class="p-3 border rounded-lg w-full h-32 focus:outline-none focus:border-blue-500"></textarea>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills" class="tab-content hidden">
+          <input type="text" id="hard-skills" placeholder="Hard Skills (e.g., JavaScript, Python)" class="p-3 border rounded-lg w-full mb-4 focus:outline-none focus:border-blue-500">
+          <input type="text" id="soft-skills" placeholder="Soft Skills (e.g., Communication, Teamwork)" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- Others -->
+        <div id="others" class="tab-content hidden">
+          <input type="text" id="certifications" placeholder="Certifications (e.g., AWS Certified Developer, 2023)" class="p-3 border rounded-lg w-full mb-4 focus:outline-none focus:border-blue-500">
+          <input type="text" id="languages" placeholder="Languages (e.g., English - Fluent, Spanish - Intermediate)" class="p-3 border rounded-lg w-full mb-4 focus:outline-none focus:border-blue-500">
+          <input type="text" id="interests" placeholder="Interests (e.g., Hiking, Coding)" class="p-3 border rounded-lg w-full focus:outline-none focus:border-blue-500">
+        </div>
+
+        <!-- AI Summary -->
+        <div class="mt-6">
+          <h3 class="text-lg font-semibold mb-2">AI-Generated Professional Summary</h3>
+          <textarea id="ai-summary" placeholder="Click 'Generate' to create a professional summary..." class="p-3 border rounded-lg w-full h-24 focus:outline-none focus:border-blue-500" readonly></textarea>
+          <button type="button" id="generate-summary" class="mt-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Generate Summary</button>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="mt-6 flex justify-end space-x-4">
+          <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">Preview Resume</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Resume Preview Section -->
+  <section id="preview-section" class="container mx-auto py-12 hidden">
+    <h2 class="text-3xl font-bold text-center mb-8">Resume Preview</h2>
+    <div id="resume-preview" class="bg-white p-8 rounded-lg shadow-xl max-w-4xl mx-auto">
+      <div id="preview-content" class="space-y-6"></div>
+      <div class="mt-6 flex justify-end space-x-4">
+        <button id="copy-resume" class="bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition">Copy to Clipboard</button>
+        <a id="email-resume" href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Email Resume</a>
+        <button id="download-pdf" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Download PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 AI Resume Builder. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
