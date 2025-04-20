@@ -1,7 +1,7 @@
 ## AI Resume Builder 2025
 
 ### live Demo
-![live Demo]()
+[live Demo](https://muzamal478.github.io/ai-resume-builder-2025)
 
 An advanced, AI-powered resume builder website built with HTML, CSS, JavaScript, and Google Gemini API. Users can input comprehensive details to generate a professional, downloadable resume with real-time previews.
 Features
